@@ -85,13 +85,14 @@
 /* style for bannar section  */
 .bannar {
     background: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 0%, rgba(255, 66, 165, 0.03) 100%);
+    height: 800px;
 }
 
 .bannar-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 85vh;
+
 }
 
 
@@ -140,19 +141,128 @@
     width: 100%;
 }
 
+/* style for funny video section  */
+.funny-video-section {
+    text-align: center;
+}
+
+.funny-title {
+    color: #0B0223;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.funny-color {
+    background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.funny-discription {
+    color: #534C64;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 48px;
+}
+
+.funny-video {
+    display: flex;
+    justify-content: space-between;
+}
+
+.caption-info {
+    max-width: 342px;
+}
+
+.video-caption {
+    color: #534C64;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    text-align: left;
+}
+
+/* The container that holds the image and the overlay */
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.image-container img {
+    width: 100%;
+}
+
+/* The overlay to hold the play icon and text */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #F948B2;
+    border-radius: 16px;
+    opacity: 0;
+    /* Hide the overlay by default */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Optional: Add a semi-transparent background to the overlay */
+    transition: opacity 0.3s ease;
+    /* Add a transition effect for smooth visibility changes */
+}
+
+/* Show the overlay (play icon and text) when hovering over the image */
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+/* Style for the play icon */
+.overlay .play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url('../images/play.png');
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+/* Style for the text */
+.overlay .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 70%);
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-top: 20px;
+    text-align: center;
+    background: var(--linear, linear-gradient(90deg, #FF42A5 0%, #FF42A5 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 /* responsive design for mobile device */
 @media screen and (max-width: 576px) {
 
     .container,
     .menu-section,
-    .bannar-container {
+    .bannar-container,
+    .funny-video {
         flex-direction: column;
         align-items: center;
     }
 
     .container,
     .bannar-container {
-        padding: 50px 0;
+        padding: 20px 0;
     }
 
     .bannar-container {
@@ -166,15 +276,21 @@
 
 /* responsive design for tablet device  */
 @media screen and (min-width: 577px) and (max-width:768px) {
+    .bannar {
+        height: 1200px;
+    }
 
     .container,
-    .bannar-container {
+    .bannar-container,
+    .funny-video {
         flex-direction: column;
         align-items: center;
     }
 
     .container,
     .bannar-container {
-        padding: 50px 0;
+        padding: 20px 0;
     }
+
+
 }
