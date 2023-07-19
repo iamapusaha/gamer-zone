@@ -297,6 +297,7 @@
     flex-wrap: wrap;
     gap: 37px;
     justify-content: center;
+    padding: 120px 0;
 }
 
 .game {
