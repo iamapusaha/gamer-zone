@@ -242,7 +242,6 @@
     width: 100%;
 }
 
-/* The overlay to hold the play icon and text */
 .overlay {
     position: absolute;
     top: 0;
@@ -252,19 +251,15 @@
     border: 3px solid #F948B2;
     border-radius: 16px;
     opacity: 0;
-    /* Hide the overlay by default */
     background-color: rgba(0, 0, 0, 0.6);
-    /* Optional: Add a semi-transparent background to the overlay */
     transition: opacity 0.3s ease;
-    /* Add a transition effect for smooth visibility changes */
+
 }
 
-/* Show the overlay (play icon and text) when hovering over the image */
 .image-container:hover .overlay {
     opacity: 1;
 }
 
-/* Style for the play icon */
 .overlay .play-icon {
     position: absolute;
     top: 50%;
@@ -278,7 +273,6 @@
     cursor: pointer;
 }
 
-/* Style for the text */
 .overlay .text {
     position: absolute;
     top: 50%;
@@ -295,7 +289,6 @@
     -webkit-text-fill-color: transparent;
 }
 
-/* style for Play Instantly section  */
 .play-instantly-section {
     display: flex;
     gap: 250px;
