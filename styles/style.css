@@ -154,6 +154,7 @@
 
 .we-text-section {
     text-align: right;
+    flex: 1;
 }
 
 .we-title {
